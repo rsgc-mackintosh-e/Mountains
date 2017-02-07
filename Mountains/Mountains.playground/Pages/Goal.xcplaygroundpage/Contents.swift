@@ -21,21 +21,6 @@ let canvas = Canvas(width: 300, height: 300)
 for x in stride(from: 0, through: 300, by: 25){
     canvas.drawEllipse(centreX: x, centreY: 300, width: 2, height: 2)
 }
-
-
-for x in stride(from: 0, through: 300, by: 25){
-canvas.drawEllipse(centreX: x, centreY: 275, width: 2, height: 2)
-    
-for x in stride(from: 0, through: 300, by: 25){
-canvas.drawEllipse(centreX: x, centreY: 250, width: 2, height: 2)
-        
-for x in stride(from: 0, through: 300, by: 25){
-canvas.drawEllipse(centreX: x, centreY: 225, width: 2, height: 2)
-            
-for x in stride(from: 0, through: 300, by: 25){
-canvas.drawEllipse(centreX: x, centreY: 200, width: 2, height: 2)
-
-}
 //: ## Template code
 //: The code below is necessary to see the result of your work in the Assistant Editor at right. Please do not remove.
 PlaygroundPage.current.liveView = canvas.imageView
