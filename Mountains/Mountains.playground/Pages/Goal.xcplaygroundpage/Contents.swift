@@ -17,6 +17,7 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 
+//draws dots
 for y in stride(from: 300, through: 0, by: -25){
 
 for x in stride(from: 0, through: 300, by: 25){
@@ -24,63 +25,23 @@ for x in stride(from: 0, through: 300, by: 25){
 }
 }
 
-//canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 100)
-//
-////var color:UIcolor = UIColor.darkGrayColor
-//canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 100, width: 300, height: 100)
-//
-//
-////for a in stride(from: 0, through: 25, by: 1)
-//
-//canvas.drawLine(fromX: 0, fromY: 100, toX: 0, toY: 101)
-//canvas.drawLine(fromX: 1, fromY: 100, toX: 0, toY: 102)
-//canvas.drawLine(fromX: 2, fromY: 100, toX: 0, toY: 103)
-//canvas.drawLine(fromX: 3, fromY: 100, toX: 0, toY: 104)
-//canvas.drawLine(fromX: 4, fromY: 100, toX: 0, toY: 105)
-//canvas.drawLine(fromX: 5, fromY: 100, toX: 0, toY: 106)
-//canvas.drawLine(fromX: 6, fromY: 100, toX: 0, toY: 107)
-//canvas.drawLine(fromX: 7, fromY: 100, toX: 0, toY: 108)
-//canvas.drawLine(fromX: 8, fromY: 100, toX: 0, toY: 109)
-//canvas.drawLine(fromX: 9, fromY: 100, toX: 0, toY: 110)
-
-//canvas.drawLine(fromX: 150, fromY: 150, toX: 200, toY: 200)
-//canvas.drawLine(fromX: 150, fromY: 150, toX: 200, toY: 200, lineWidth: 10)
-//canvas.drawLine(fromX: 50, fromY: 50, toX: 50, toY: 50, lineWidth: 10)
-//canvas.drawLine(fromX: 0, fromY: 0, toX: 150, toY: 50, lineWidth: 10)
-
-
-
+//draws right angle triangles facing right
+for f in stride(from: 0, through: 250, by: 50){
 for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g, fromY: 50, toX: g, toY: g+25)
+    canvas.drawLine(fromX: g+f, fromY: 50, toX: g+f, toY: g+25)
 }
-
-for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g+50, fromY: 50, toX: g+50, toY: g+25)
-}
-
-for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g+100, fromY: 50, toX: g+100, toY: g+25)
-}
-
-for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g+150, fromY: 50, toX: g+150, toY: g+25)
-}
-
-for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g+200, fromY: 50, toX: g+200, toY: g+25)
-}
-
-for g in stride(from: 25, through: 50, by: 1){
-    canvas.drawLine(fromX: g+250, fromY: 50, toX: g+250, toY: g+25)
 }
 
 
-//for f in stride(from: 25, through: 0, by: 1)
-for g in stride(from: 50, through: 75, by: 1){
-    canvas.drawLine(fromX: g, fromY: 50, toX: g, toY: g)
+//draws 6 right triangles facing left
+for f in stride(from: 0, through: 250, by: 50){
+for g in stride(from: 0, through: 25, by: 1){
+    canvas.drawLine(fromX: g+f, fromY: 50, toX: g+f, toY: 75-g)
+}
 }
 
-
+//fills in bottom
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 300, height: 50)
 
 //canvas.drawLine(fromX: <#T##Int#>, fromY: <#T##Int#>, toX: <#T##Int#>, toY: <#T##Int#>, lineWidth: <#T##Int#>)
 //: ## Template code
